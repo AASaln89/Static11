@@ -4,36 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Static
+namespace Static11
 {
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("ENTER RADIUS");
-            Console.WriteLine(Round.Okr(out double L));
-            Console.WriteLine();
-            Console.WriteLine("ENTER RADIUS");
-            Console.WriteLine(Round.S(out double S));
+            double r = Convert.ToDouble(Console.ReadLine());
+            double S = Round.S(r);
+            double O = Round.Okr(r);
+            Console.WriteLine(S);
+            Console.WriteLine(O);
             Console.ReadKey();
-        }
-    }
-    public static class Round
-    {
-        public static double Okr(out double L)
-        {
-            double r;
-            r = Convert.ToInt32(Console.ReadLine());
-            L = 2 * r * Math.PI;
-            return L;
-        }
-
-        public static double S(out double S)
-        {
-            double r;
-            r = Convert.ToInt32(Console.ReadLine());
-            S = Math.PI * r * r;
-            return S;
         }
     }
 }
